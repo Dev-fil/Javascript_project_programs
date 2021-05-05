@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+ function color(){
+     a=document.getElementById("user").value;
+     if(a<1 ||a>5){
+         alert("Entered No. should be between 1-5")
+     }
+     s=document.getElementsByTagName('p');
+       s[a-1].style.background="red"  
+
+ }
+  function changeall(){
+    s=document.getElementsByTagName('p');
+    for(i=0;i<=s.length;i++){
+       s[i].style.background="yellow"
+    }
+  }
+    </script>
+<body>
+     Enter Para To Be Changed<input type="number" id="user">
+    <p>MISA-MISA</p>
+    <p>MISA-MISA</p>
+    <p>MISA-MISA</p>
+    <p>MISA-MISA</p>
+    <p>MISA-MISA</p>
+    
+    
+    <button onclick="color()">CHOICE</button>
+    <button onclick="changeall()">CHANGE ALL</button>
+
+</body>
+</html>

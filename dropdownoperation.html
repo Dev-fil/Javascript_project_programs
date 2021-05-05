@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function add(){
+var newf=document.getElementById("c");
+// var nfruit=document.getElementsByTagName("a");
+// nfruit.add(newf);
+// var q=newf.appendChild(nfruit);
+// //var olist=document.getElementsByTagName("option");
+// q.appendChild(document.getElementsByTagName("option"));
+function add() {
+  var x = document.getElementById("a");
+  var option = document.createElement("option");
+  //option.text = newf;
+  option.value=newf
+  x.add(option);
+
+    }
+</script>
+<body>
+   <label> LIST OF FRUITS:</label>
+       <select id="a" style="font-size: medium;">
+        <option>Apple</option>
+        <option>Mango</option>
+        <option>Banana</option>
+        <option>Papaya</option>
+        <option>Grappes</option>
+
+     
+    </select><br><br>
+    NAME OF FRUIT TO BE ADDED:<input type="text" id ="c"><button onclick="add()">ADD</button>
+</body>
+</html>

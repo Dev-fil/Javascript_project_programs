@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1  style="font-size: large;box-sizing: border-box;color: crimson;">SALARY CALCULATOR</h1>
+    BASIC SALARY <input type="number" id="salary">&nbsp;<button onclick="details()">COMPUTE</button>
+    <fieldset>
+        <legend> salary details</legend>
+        <script>
+            function details(){
+                var s=document.getElementById("salary").value;
+                confirm("Entered Salary is"+s);
+                 
+                 var hra=0.1*s;
+                 var da=0.2*s;
+                 var ta=0.3*s;
+                 var pf=0.4*s;
+                 var tax=0.5*s;
+                 var gs=0.6*s;
+                 var ns=0.7*s;
+                 
+                document.write("HRA IS .."+hra);
+                document.write("<br>");
+                document.write("<br>");
+                document.write("DA IS .. "+da);
+                document.write("<br>");
+                document.write("<br>");
+                document.write("TA IS .."+ta);
+                document.write("<br>");
+                document.write("<br>");
+                document.write("PF IS .. "+pf);
+                document.write("<br>");
+                document.write("<br>");
+                document.write("TAX IS .. "+tax);
+                document.write("<br>");
+                document.write("<br>");
+                document.write("GS IS .. "+gs);
+                document.write("<br>");
+                document.write("<br>");
+                document.write("NS IS .."+ns);
+
+            }
+        </script>
+    
+        </fieldset>
+
+
+</body>
+</html>

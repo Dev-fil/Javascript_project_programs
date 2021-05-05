@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    var t=document.getElementById("text1").value;
+    function bold(){
+        alert("TEXT BOLDED")
+        var result= t.bold();
+       // document.getElementById("demo").innerHTML=result;
+    }
+    function italic(){
+        alert("TEXT MADE ITALIC");
+        t.style.italic;
+    }
+function font(){
+var q=document.getElementById("a").value
+t.style.fontsize(q)
+    }
+    function color(){
+        var s=document.getElementById("b").value;
+        t.style.background(s);
+    }
+</script>
+<body>
+    <h1 style="font-size: large;box-sizing: border-box;color: crimson;">NOTES MAKING APP</h1>
+    <input type="text"  style="width: 300px;height: 300px;" id="text1"><br><br>
+    <button  onclick="bold()" >BOLD</button>&nbsp;&nbsp;<button onclick="italic()">ITALIC</button><br><br>
+    <label> FONT-SIZE</label>
+       <select id="a" style="font-size: medium;">
+        <option>14</option>
+        <option>16</option>
+        <option>18</option>
+        <option>20</option>
+        <option>22</option>
+    </select>
+    <button onclick="font()">STYLE</button>
+&nbsp;&nbsp;
+        <label> FONT-COLOR</label>
+        <select id="b" style="font-size: medium;">
+         <option>Red</option>
+         <option>Green</option>
+         <option>Yellow</option>
+         <option>Blue</option>
+         </select>
+         <button onclick="color()">STYLE</button>
+
+
+
+        
+
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function change(){
+     var para=document.getElementById("para");
+     var img2=document.getElementById("img1");
+     var newimage=document.createElement("img")
+     newimage.src="DOMimage/abc.jpg"
+     newimage.height="200"
+     newimage.width="200"
+     para.replaceChild(newimage,img2);
+    }
+
+    </script>
+<body>
+    <p id="para">
+    <img id="img1" src="DOMimage/ruke.jfif">
+    </p>
+    <button onclick="change()">CHANGE IMAGE</button>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="id2">
+        <ul id="id7">
+            <li>java</li>
+            <li>javascript</li>
+            <li>dart</li>
+            <li>c</li>
+        </ul>
+    <p id="id1" class="class1">MISA-MISA</p>
+    <p class="para2">MISA-MISA</p>
+    <p id="id3" class="class2 class3">MISA-MISA</p>
+    <p>MISA-MISA</p>
+    <p>MISA-MISA</p>
+    <script>
+        var mydiv=document.getElementById("id2");
+        var l=mydiv.querySelectorAll("*")
+        console.log(1);
+    </script>
+</body>
+</html>

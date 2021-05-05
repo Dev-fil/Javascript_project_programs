@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #heading1 {
+            margin-top: 330px;
+            margin-left: 700px;
+
+        }
+        #button2{
+            margin-top: 10px;
+            margin-left: 630px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Remember the numbers on the Screen</h2>
+    <button onclick="startGame()" id="button1">Start Game</button>
+    <h1 id="heading1"></h1>
+    <script>
+         var arr = []
+        
+        function startGame() {
+           var i = 0,rnd,t
+          
+            document.getElementById('button1').disabled = true
+            
+            t = setInterval(function (){
+                i++
+                if(i == 6){
+                    clearInterval(t)
+                //   let button10 = document.createElement("button")
+                //   button10.innerHTML = "Ready"
+                //   document.body.appendChild(button10)
+                //   button10.addEventListener('click',readyGame)
+                readyGame()
+                }
+            rnd = Math.floor(Math.random() * (100 - 0)) + 0;
+             arr.push(rnd)
+             console.log(arr)
+             document.getElementById('heading1').innerHTML = rnd
+            },500);   
+        }
+
+        function readyGame(){
+            document.body.removeChild(document.getElementById('heading1'))
+            let ques = document.createElement('h2')
+            ques.innerHTML = "Write all numbers here"
+            
+            document.body.appendChild(ques)
+            let div1 = document.createElement("div")
+            div1.id = 'div1'
+            let userinput1 = document.createElement('input')
+            userinput1.type = "number"
+            userinput1.id = "inp1"
+            document.body.appendChild(div1.appendChild(userinput1))
+
+            let div2 = document.createElement("div")
+            div2.id = 'div2'
+            let userinput2 = document.createElement('input')
+            userinput2.type = "number"
+            userinput2.id = "inp2"
+            document.body.appendChild(div2.appendChild(userinput2))
+
+            let div3 = document.createElement("div")
+            div3.id = 'div3'
+            let userinput3 = document.createElement('input')
+            userinput3.type = "number"
+            userinput3.id = "inp3"
+            document.body.appendChild(div3.appendChild(userinput3))
+
+            let div4 = document.createElement("div")
+            div4.id = 'div4'
+            let userinput4 = document.createElement('input')
+            userinput4.type = "number"
+            userinput4.id = "inp4"
+            document.body.appendChild(div4.appendChild(userinput4))            
+
+            let div5 = document.createElement("div")
+            div5.id = 'div5'
+            let userinput5 = document.createElement('input')
+            userinput5.type = "number"
+            userinput5.id = "inp5"
+            document.body.appendChild(div5.appendChild(userinput5))            
+
+            let div6 = document.createElement("div")
+            div6.id = 'div6'
+            let sub = document.createElement('button')
+            sub.id = "sub"
+            sub.innerHTML = "Submit"
+            document.body.appendChild(div6.appendChild(sub))     
+            sub.addEventListener("click",checkResult)
+        }
+
+        function checkResult(){
+            let count = 0
+           let a = document.getElementById('inp1').value
+           let b = document.getElementById('inp2').value
+           let c = document.getElementById('inp3').value
+           let d = document.getElementById('inp4').value
+           let e = document.getElementById('inp5').value
+           let para = document.createElement('p')
+       
+            console.log(a,b,c,d,e)
+           
+           arr.forEach(element => {
+               if(a == element)
+                    count++
+              else if(b == element)
+               count++
+              else if(c == element)
+               count++     
+               else if(d == element)
+               count++
+               else if(e == element)
+               count++
+           });
+            
+            para.innerHTML = "You got " + count + " out of 5 correct"
+            document.body.appendChild(para)
+           document.getElementById('sub').disabled = true
+            
+        }
+    </script>
+</body>
+
+</html>

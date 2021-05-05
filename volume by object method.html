@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function object(){
+        var cylinder={
+             height:'111',
+             radius:'597',
+             calc_vol: function(h,r){
+                 let v=3.142*h*r*r;
+                 return v;
+             }
+        };
+        document.write(cylinder.calc_vol(100,50));
+    }
+    </script>
+</head>
+<body>
+    <P>TO GET VOLUME BY OBJECT METHOD :
+        CLICK BUTTON</P>
+        <button onclick="object()">GET RESULT</button>
+</body>
+</html>

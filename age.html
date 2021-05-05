@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function age(){
+            var a=Number(document.getElementById("btn").value);
+            if(a<18){
+                alert("you are not elligible");
+            }
+            else{
+                alert("you are elligible");
+            }
+        }
+    </script>
+</head>
+<body>
+    <input type="number" placeholder="enter age" id="btn">
+    <br>
+    <button onclick="age()">click me</button>
+
+</body>
+</html>

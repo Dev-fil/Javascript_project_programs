@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="div1" style="color:black;" onmouseover="stext"   onmouseout="htext">TEXT1</span><p />
+    <hr color="black" />
+<span id="div2" style="color:red;"onmouseover="htext" onmouseout="stext">Text2</span>
+
+
+
+<script>
+
+
+setInterval(function() {
+    var x = document.getElementById("div1");
+    var y = document.getElementById("div2");
+
+    function stext() {
+        x.style.color = 'red';
+        y.style.color = 'black';
+    }
+
+    function htext() {
+        x.style.color = 'black';
+        y.style.color = 'red';
+    }
+}, 250);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function tipcalc(bill){
+            let tip=[];
+            let finalamount=[];
+            let value;
+            for(i=0;i<3;++i){
+                value=bill[i];
+                if(value<50){
+                    tip[i]=0.20*value;
+                  
+                }
+                else if(value>50 && value<200){
+                     tip[i]=0.15*value;
+                    
+
+                }
+                else{
+                    tip[i]=0.10*value;
+                   
+                }
+               
+               // document.write("array of final amount"+finalamount);
+            }
+            document.write("array of tips<br>"+tip+"<br>");
+        }
+        function finalcalc(bill){
+            let tip=[];
+            let finalamount=[];
+            let value;
+            for(i=0;i<3;++i){
+                value=bill[i];
+                if(value<50){
+                    tip[i]=0.20*value;
+                    finalamount[i]=tip[i]+bill[i];
+                }
+                else if(value>50 && value<200){
+                     tip[i]=0.15*value;
+                     finalamount[i]=tip[i]+value;
+
+                }
+                else{
+                    tip[i]=0.10*value;
+                    finalamount[i]= tip[i]+value;
+                }
+               // document.write("array of tips"+tip);
+              
+            }
+            document.write("array of final amount<br>"+finalamount+"<br>");
+        }
+        </script>
+</head>
+<body>
+    <script>
+        let bill = [124,48,268];
+        document.write("array of amount is<br>"+bill+"<br>");
+    </script>
+        <button onclick="tipcalc(bill)">get tip</button>
+        <button onclick="finalcalc(bill)">getfinalamount</button>
+
+        
+</body>
+</html> 

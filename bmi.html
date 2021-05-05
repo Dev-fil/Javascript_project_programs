@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let Mweight,Jweight,Mheight,Jheight,JBMI,MBMI;
+        Mweight=68,
+        Jweight=70,
+        Mheight=1.3,
+        Jheight=1.22,
+
+        JBMI=Jweight/(Jheight*Jheight);
+        MBMI=Mweight/(Mheight*Mheight);
+
+document.writeln("john BMI is"+JBMI)
+document.writeln("mark BMI is"+MBMI)
+
+            document.writeln("the one with greater BMI  is :")
+        if (JBMI>MBMI){
+            document.writeln("John has greater BMI than Mark")
+        }else{
+            document.writeln("Mark has greater BMI than John")
+        }
+
+
+
+        </script>
+</body>
+</html>

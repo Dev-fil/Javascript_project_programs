@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        x = 0;
+       function  addelement(){
+            array = Array()
+            array[x]=document.getElementById("a").value;
+            alert('element ' + array[x] + ' added at ' + x);
+            x++;
+        }
+        function display(){
+            document.write(array);
+        }
+        </script>
+</head>
+<body>
+    <input type="text" id="a"  >
+    <button onclick="addelement()">ADD</button>
+    <button onclick="display()">DISPLAY</button>
+</body>
+</html>

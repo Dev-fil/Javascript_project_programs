@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   Enter a string--> <input type="text" id="string" autofocus>
+   <button onclick="checkPallindrome()">Click</button>
+
+   <script>
+       function checkPallindrome(){
+            let string = document.querySelector('input').value
+            let flag = 0 
+            let length1 = string.length;
+            for (let i = 0; i < length1; i++) {
+                if(string[i] != string[length1 - 1 - i]){
+                    flag = 1;
+                    break
+                }
+                
+            }
+
+            if(flag == 1){
+                alert(' enterd String is not pallindrome'); 
+            }
+            else
+            alert(' entered String is pallindrone');
+       }
+   </script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+         var h = 0
+  var m =0
+  var s =0
+  var ms =0
+  var t
+  let count = 0
+        function startTime() {
+  
+//   m = checkTime(m);
+//   s = checkTime(s);
+//   ms = checkTime(ms);
+      ++ms
+      if(ms >= 100){
+          s++
+          ms = 0
+          if(s >= 60){
+              m++
+              s = 0
+              if(m >= 60){
+                  h++
+                  m = 0
+              }
+          }
+      }
+  
+  document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s + ":" + ms;
+ 
+//   if(document.getElementById("stop").value =="stop")
+//       return;
+   t = setTimeout(startTime, 10);
+ 
+}
+
+function Stop(){
+    
+    clearTimeout(t)
+  }
+// function checkTime(i) {
+//   if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+//   return i;
+// }
+
+function Restart(){
+    h = 0
+     m =0
+   s =0
+   ms =0
+    document.getElementById('txt').innerHTML =
+  h + ":" + m + ":" + s + ":" + ms;
+  count++
+}
+
+function Lap(){
+    var time = h + ":" + m + ":" + s + ":" + ms;
+    var list = document.createElement("li")
+    var textnode = document.createTextNode(time)
+    list.appendChild(textnode)
+    document.getElementById("list").appendChild(list)
+}
+</script>
+
+</head>
+<body>
+
+    <div id="txt"></div>
+    <div id="lap">
+        <ul id="list">
+        </ul>
+    </div>
+    <button onclick="startTime()">Start</button>&nbsp;&nbsp;&nbsp;
+    <button onclick="Stop()">Stop</button>&nbsp;&nbsp;&nbsp;
+    <button onclick="Restart()">Restart</button>&nbsp;&nbsp;&nbsp;
+    <button onclick="Lap()">Lap</button>
+
+    <div>
+
+    </div>
+    
+</body>
+</html>

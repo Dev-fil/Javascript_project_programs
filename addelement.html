@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function addpara(){
+  var  element=document.getElementById("1");
+     var para = document.createElement('p');
+     para.style.backgroundColor=("red")
+     para.appendChild(document.createTextNode("para3"));
+doc.appendChild(para);
+    }
+</script>
+<body>
+    <div id="doc">
+    <p id ="1"> para1</p>
+        <p id="2" >
+            para2
+        </p>
+    </div>
+    <button onclick="addpara()">ADD</button>
+    
+</body>
+</html>

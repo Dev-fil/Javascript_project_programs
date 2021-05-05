@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body>
+        <table id="myTable" border="1">
+        <tr>
+            <td>101</td>
+        <td>ram</td>
+        <td> 50000</td>
+    </tr>
+         <td>102</td>
+        <td>malik</td>
+        <td> 50000</td>
+    </tr>
+    <td>103</td>
+    <td>shivesh</td>
+    <td> 50000</td>
+    </tr>
+</tr>
+<td>104</td>
+<td>rahul</td>
+<td> 50000</td>
+</tr>
+</tr>
+<td>105</td>
+<td>shyam</td>
+<td> 50000</td>
+</tr>
+        </table><form>
+        <input type="button" onclick="changeContent()" value="Change content">
+        </form></body>
+        <script>
+            function changeContent()
+{
+rn = window.prompt("Input the Row number(0,1,2,3,4,)", "0");
+cn = window.prompt("Input the Column number(0,1,2)","0");
+content = window.prompt("Input the Cell content");  
+var x=document.getElementById('myTable').rows[parseInt(rn,10)].cells;
+x[parseInt(cn,10)].innerHTML=content;
+}
+        </script>
+</html>

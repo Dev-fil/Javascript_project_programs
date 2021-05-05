@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dropdown list</title>
+</head>
+<body>
+    <form action="">
+        <select name="color" id="colorSelect">
+            <option value="">red</option>
+            <option value="">green</option>
+            <option value="">blue</option>
+            <option value="">black</option>
+        </select>
+        <input type="button" onclick="remove()" value="Select and Remove">
+        <input type="text" name="" id="color">
+        <input type="button" onclick="add()" value="Enter and Add">
+    </form>
+    <script>
+        function remove() {
+            var x = document.getElementById("colorSelect");
+            x.remove(x.selectedIndex);
+        }
+        function add() {
+            var x = document.getElementById("colorSelect");
+            var y = document.getElementById("color");
+            x.options[select.options.length] = new Option(y.value, y.value);
+        }
+    </script>
+</body>
+</html>

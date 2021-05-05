@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BASKETBALL GAME</title>
+    <script>
+        function average(obj){
+            for(let i=0;i<obj.length;++i){
+                sum = 0;
+                sum+=obj[i];
+            }
+            return sum/3;
+                   };
+
+         result=(x,y)=>x>y? alert("john wins"):alert("mike wins");
+        
+    </script>
+</head>
+<body>
+    <script>
+        let mike=[116,94,123];
+        let john=[89,120,103];
+        let averageMike = average(mike);
+        let averageJohn = average(john);
+        document.write("Mikes average score is "+ averageMike + "<br>");
+        document.write("Johns average score is "+ averageJohn +"<br>");
+        
+        
+        // if(averageJohn > averageMike){
+        //     document.write("mikes team has higher average then johns team"+"<br>");
+        //     document.write(mike_avg+"<br>");
+        // }
+        // else{
+        //     document.write("johns team has higher average then mikes team"+"<br>");
+        //     document.write(john_avg+"<br>");
+        // }
+
+
+        </script>
+        <button onclick=result(averageJohn,averageMike)>RESULT</button>
+</body>
+</html>
